@@ -1,0 +1,93 @@
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>seek coding</title>
+    <link rel="stylesheet" href="LogIn.css">
+  
+</head>
+<body>
+    
+    <div class="full-page">
+        <div class="navbar">
+            
+            <nav >
+                <ul id='MenuItems'>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                    <form action="ALogIn.html">
+                        <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Admin Login</button></li>
+                    </form>
+                </ul>
+            </nav>
+        </div>
+
+        
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn' style="color:white ;"  >Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn' style="color:white ;">Register</button>
+                </div>
+                
+                
+                <form id='login' class='input-group-login' action="login" method="Get">
+                    <input type='text'class='input-field'placeholder='Email' name='Email'required >
+		    <input type='password'class='input-field'placeholder='Enter Password' name='Password' required>
+		    <input type='checkbox'class='check-box'><span>Remember Password</span>
+		    <button type='submit'class='submit-btn' style="color:white ;">Log in</button>
+		 </form>
+       
+
+        
+		 <form id='register' class='input-group-register' action="register" method="Get">
+		     <input type="text" class='input-field'placeholder='First Name' name="cFirstName" required >
+		     <input type="text"class='input-field'placeholder='Last Name ' name='cLastName' required >
+                     <input type="text"class='input-field'placeholder='Email' name='cEmail' required >
+		     <input type="password" class='input-field'placeholder='Enter Password' name='cPassword' required>
+		     <input type="password"class='input-field'placeholder='Confirm Password'  name='cConfirmPassword' required>
+                     <input type="text"class='input-field'placeholder='Home Address' name='cHomeAddress' required >
+		     <input type='checkbox'class='check-box'><span>I agree to the terms and conditions</span>
+                    <button type='submit'class='submit-btn'style="color:white ;">Register</button>
+	          </form>
+            
+            </div>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
+</body>
+</html>

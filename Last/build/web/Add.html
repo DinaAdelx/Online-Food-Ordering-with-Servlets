@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD</title>
+    <link rel="stylesheet" href="LogIn.css">
+    <!---we had linked our css file----->
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+           
+            <nav>
+                <ul id='MenuItems'>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Add</button></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div id='login-form' class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                   
+                </div>
+                <form id='login' class='input-group-login' action = 'AddingItem' method = 'post'>
+                    <input type='text' class='input-field'  placeholder='DishName ' name='Name' required >
+		    <input type='text' class='input-field' placeholder='DishPrice ' name='Price' required>
+            <input type='text' class='input-field' placeholder='DishDescription' name='Description' required>
+            <input type='text' class='input-field' placeholder='DishPicture' name='PictureLink' required>
+            <input type='text' class='input-field' placeholder='DishDeliveryTime' name='DishDeliveryTime' required>
+
+		    
+		    <button type='submit' class='submit-btn' style="color:white ;">ADD</button>
+		 </form>
+		 
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+	
+		var z=document.getElementById('btn');
+	
+		function login()
+		{
+			x.style.left='50px';
+		
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
